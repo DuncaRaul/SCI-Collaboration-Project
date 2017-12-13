@@ -1,4 +1,6 @@
 package ro.springhotel.hotel.domain;
 
-public abstract class AbstractModel {
+public class Payment {
+
+
 }
