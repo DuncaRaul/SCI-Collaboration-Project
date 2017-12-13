@@ -2,6 +2,9 @@ package ro.springhotel.hotel.domain;
 
 import java.util.ArrayList;
 
+/**
+ * @author Dani
+ */
 public class Hotel {
 
     private ArrayList<Room> rooms;
