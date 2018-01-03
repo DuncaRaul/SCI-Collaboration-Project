@@ -11,7 +11,7 @@ import java.util.concurrent.atomic.AtomicLong;
 /**
  * @author Raul Dunca
  */
-public class IMBaseDAO<T extends AbstractModel> implements BaseDAO{
+public class IMBaseDAO<T extends AbstractModel> implements BaseDAO<T>{
 
     private Map<Long, T> models = new HashMap<Long, T>();
 
