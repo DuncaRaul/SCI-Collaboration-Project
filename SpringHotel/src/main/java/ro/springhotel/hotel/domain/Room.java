@@ -3,7 +3,7 @@ package ro.springhotel.hotel.domain;
 /**
  * @author Dani
  */
-public class Room {
+public class Room extends AbstractModel {
 
     private float pricePerDay;
     private int nrOfBeds;
