@@ -20,13 +20,13 @@ public class Client extends AbstractModel {
     @DateTimeFormat(pattern = "dd-MM-yyyy")
     private Date birthDate;
 
-    public Client(String userName, String password, float budget, boolean hasCar, boolean hasPet) {
-        this.userName = userName;
-        this.password = password;
-        this.budget = budget;
-        this.hasCar = hasCar;
-        this.hasPet = hasPet;
-    }
+//    public Client(String userName, String password, float budget, boolean hasCar, boolean hasPet) {
+//        this.userName = userName;
+//        this.password = password;
+//        this.budget = budget;
+//        this.hasCar = hasCar;
+//        this.hasPet = hasPet;
+//    }
 
     public String getUserName() {
         return userName;
