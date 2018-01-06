@@ -8,7 +8,7 @@ public interface BaseDAO <T extends AbstractModel> {
 
     Collection<T> getAll();
 
-    T findById(Long id);
+    T findById(long id);
 
     T update(T model);
 

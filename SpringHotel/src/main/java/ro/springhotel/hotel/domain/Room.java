@@ -5,6 +5,7 @@ package ro.springhotel.hotel.domain;
  */
 public class Room extends AbstractModel {
 
+    private long id;
     private float pricePerDay;
     private int nrOfBeds;
     private boolean isOccupied;
@@ -24,6 +25,16 @@ public class Room extends AbstractModel {
 
     public TypeOfRoom getTypeOfRoom() {
         return typeOfRoom;
+    }
+
+    @Override
+    public long getId() {
+        return id;
+    }
+
+    @Override
+    public void setId(long id) {
+        this.id = id;
     }
 
     @Override

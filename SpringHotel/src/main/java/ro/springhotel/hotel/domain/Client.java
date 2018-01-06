@@ -8,6 +8,7 @@ import java.util.Date;
  */
 public class Client extends AbstractModel {
 
+    private long id;
     private String userName;
     private String password;
     private String firstName;
@@ -101,6 +102,16 @@ public class Client extends AbstractModel {
     }
 
     @Override
+    public long getId() {
+        return id;
+    }
+
+    @Override
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    @Override
     public String toString() {
         return "Client{" +
                 "userName='" + userName + '\'' +
@@ -109,5 +120,39 @@ public class Client extends AbstractModel {
                 ", hasCar=" + hasCar +
                 ", hasPet=" + hasPet +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Client client = (Client) o;
+
+        if (id != client.id) return false;
+        if (Float.compare(client.budget, budget) != 0) return false;
+        if (hasCar != client.hasCar) return false;
+        if (hasPet != client.hasPet) return false;
+        if (userName != null ? !userName.equals(client.userName) : client.userName != null) return false;
+        if (password != null ? !password.equals(client.password) : client.password != null) return false;
+        if (firstName != null ? !firstName.equals(client.firstName) : client.firstName != null) return false;
+        if (lastName != null ? !lastName.equals(client.lastName) : client.lastName != null) return false;
+        if (gender != client.gender) return false;
+        return birthDate != null ? birthDate.equals(client.birthDate) : client.birthDate == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = (int) (id ^ (id >>> 32));
+        result = 31 * result + (userName != null ? userName.hashCode() : 0);
+        result = 31 * result + (password != null ? password.hashCode() : 0);
+        result = 31 * result + (firstName != null ? firstName.hashCode() : 0);
+        result = 31 * result + (lastName != null ? lastName.hashCode() : 0);
+        result = 31 * result + (gender != null ? gender.hashCode() : 0);
+        result = 31 * result + (budget != +0.0f ? Float.floatToIntBits(budget) : 0);
+        result = 31 * result + (hasCar ? 1 : 0);
+        result = 31 * result + (hasPet ? 1 : 0);
+        result = 31 * result + (birthDate != null ? birthDate.hashCode() : 0);
+        return result;
     }
 }
