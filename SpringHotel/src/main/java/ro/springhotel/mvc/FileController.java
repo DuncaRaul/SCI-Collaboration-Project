@@ -19,7 +19,7 @@ import java.io.File;
 public class FileController {
 
 
-    @Value("$(local.files.dir)");
+    @Value("$(local.files.dir)")
     private String localFilesDir;
 
     @RequestMapping(value = "", method = RequestMethod.GET)

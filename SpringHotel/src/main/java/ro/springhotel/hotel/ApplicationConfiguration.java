@@ -22,17 +22,17 @@ import javax.sql.DataSource;
 @EnableTransactionManagement
 public class ApplicationConfiguration implements TransactionManagementConfigurer{
 
-    @Value("${db.host}")
+    @Value("${localhost}")
     private String dbHost;
 
-    @Value("${db.password}")
+    @Value("${postgres}")
     private String dbPassword;
 
-    @Value("${db.user}")
+    @Value("${postgres}")
     private String dbUser;
 
 
-    @Value("${db.name}")
+    @Value("${SpringHotel}")
     private String dbName;
 
     @Bean
