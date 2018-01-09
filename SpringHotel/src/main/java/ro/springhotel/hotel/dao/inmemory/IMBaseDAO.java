@@ -23,7 +23,7 @@ public class IMBaseDAO<T extends AbstractModel> implements BaseDAO<T>{
     }
 
     @Override
-    public AbstractModel findById(Long id) {
+    public T findById(long id) {
         return models.get(id);
     }
 
