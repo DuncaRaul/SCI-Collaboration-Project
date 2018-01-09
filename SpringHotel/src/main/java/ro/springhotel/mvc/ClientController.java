@@ -3,6 +3,7 @@ package ro.springhotel.mvc;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Role;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.FieldError;
@@ -15,6 +16,7 @@ import ro.springhotel.hotel.service.Monitoring;
 import org.springframework.web.servlet.ModelAndView;
 import ro.springhotel.hotel.service.ValidationException;
 
+import javax.annotation.security.RolesAllowed;
 import javax.validation.Valid;
 import javax.validation.Validation;
 import java.util.Collection;
@@ -56,6 +58,7 @@ public class ClientController {
         return modelAndView;
     }
 
+    @RolesAllowed("Admin")
     @RequestMapping("/delete")
     public String delete(long id){
         clientService.delete(id);

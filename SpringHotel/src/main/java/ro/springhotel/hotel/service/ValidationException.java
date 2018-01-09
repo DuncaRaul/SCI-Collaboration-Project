@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class ValidationException extends Exception {
     private String[] causes;
 
-    public ValidationException(String... causes) {
+    public ValidationException(String[] causes) {
         super();
         this.causes = causes;
     }

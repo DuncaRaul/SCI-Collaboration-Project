@@ -18,22 +18,24 @@ public class IMBaseDAO<T extends AbstractModel> implements BaseDAO<T>{
     private static AtomicLong ID = new AtomicLong(System.currentTimeMillis());
 
     @Override
-    public Collection getAll() {
+    public Collection<T> getAll() {
         return models.values();
     }
 
     @Override
+
     public T findById(long id) {
+
         return models.get(id);
     }
 
     @Override
-    public AbstractModel update(AbstractModel model) {
+    public T update(T model) {
         if (model.getId() <= 0) {
             model.setId(ID.getAndIncrement());
         }
 
-        models.put(model.getId(), (T) model);
+        models.put(model.getId(), model);
         return model;
     }
 

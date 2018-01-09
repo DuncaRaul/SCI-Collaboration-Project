@@ -4,7 +4,7 @@
 	http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
 
     <bean id="imDAO" class="ro.springhotel.hotel.dao.inmemory.IMClientDAO"/>
-    <bean id="employeeService" class="ro.springhotel.hotel.service.ClientService">
+    <bean id="clientService" class="ro.springhotel.hotel.service.ClientService">
         <property name="dao" ref="imDAO" />
     </bean>
 
