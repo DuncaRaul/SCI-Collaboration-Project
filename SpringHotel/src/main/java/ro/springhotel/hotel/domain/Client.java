@@ -3,7 +3,7 @@ package ro.springhotel.hotel.domain;
 /**
  * @author Dani
  */
-public class Client {
+public class Client extends AbstractModel {
 
     private String userName;
     private String password;
