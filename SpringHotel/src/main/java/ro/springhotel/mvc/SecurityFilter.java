@@ -9,22 +9,16 @@ import javax.servlet.ServletResponse;
 import java.io.IOException;
 import java.security.Security;
 import java.util.logging.Filter;
+import java.util.logging.LogRecord;
 
 public class SecurityFilter implements Filter {
 
-    @Autowired
-    private SecurityService securityService;
+//    @Autowired
+//    private SecurityService securityService;
+
 
     @Override
-    public void destroy() {
-        // TODO Auto-generated method stub
-    }
-
-    @Override
-    public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
-
-        chain.doFilter(request, response);
-
-
+    public boolean isLoggable(LogRecord record) {
+        return false;
     }
 }

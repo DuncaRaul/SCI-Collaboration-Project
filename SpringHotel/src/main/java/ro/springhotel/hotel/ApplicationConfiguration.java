@@ -43,15 +43,6 @@ public class ApplicationConfiguration implements TransactionManagementConfigurer
         return hotel;
     }
 
-    	@Bean
-   public ClientDAO employeeDAO() {
-		return new JdbcHotelDAO("localhost",
-				"5432",
-				"SpringHotel",
-				"postgres" ,
-				"postgres");
-   }
-
     @Bean
     public ClientDAO clientDAO() {
         return new JdbcTemplateClientDAO(dataSource());

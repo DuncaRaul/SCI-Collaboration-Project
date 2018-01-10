@@ -24,7 +24,7 @@ import java.util.List;
 
 
 @Component
-public class ComonModelInterceptor implements HandlerInterceptor {
+public class CommonModelInterceptor implements HandlerInterceptor {
 
     @ModelAttribute
     public void getCommonModel (ModelAndView model, HttpServletRequest request) {
