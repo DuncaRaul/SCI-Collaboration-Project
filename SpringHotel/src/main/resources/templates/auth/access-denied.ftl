@@ -27,7 +27,7 @@
 
 		<ol class="breadcrumb">
 			<li><a href="/">Home</a></li>
-			<li><a href="/client">Clients</a></li>
+			<li><a href="/clients">Clients</a></li>
 			<li class="active">Login</li>
 		</ol>
 

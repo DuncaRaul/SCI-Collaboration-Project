@@ -8,15 +8,14 @@ import ro.springhotel.hotel.domain.Gender;
 
 import java.sql.*;
 import java.util.Collection;
-import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
 
 /**
  * @author Dani
  */
-public class JdbcHotelDAO implements ClientDAO {
-    private static final Logger LOGGER = LoggerFactory.getLogger(JdbcHotelDAO.class);
+public class JdbcClientDAO implements ClientDAO {
+    private static final Logger LOGGER = LoggerFactory.getLogger(JdbcClientDAO.class);
 
     private String host;
     private String port;
@@ -27,7 +26,7 @@ public class JdbcHotelDAO implements ClientDAO {
 
 
 
-    public JdbcHotelDAO(String host, String port, String dbName, String userName, String pass) {
+    public JdbcClientDAO(String host, String port, String dbName, String userName, String pass) {
         this.host = host;
         this.userName = userName;
         this.pass = pass;

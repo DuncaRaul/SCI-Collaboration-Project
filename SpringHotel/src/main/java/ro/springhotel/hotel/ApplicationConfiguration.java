@@ -11,9 +11,7 @@ import org.springframework.transaction.annotation.TransactionManagementConfigure
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import ro.springhotel.hotel.dao.ClientDAO;
 
-import ro.springhotel.hotel.dao.db.JdbcHotelDAO;
 import ro.springhotel.hotel.dao.db.JdbcTemplateClientDAO;
-import ro.springhotel.hotel.dao.inmemory.IMClientDAO;
 import ro.springhotel.hotel.service.ClientService;
 
 import javax.sql.DataSource;
@@ -53,15 +51,15 @@ public class ApplicationConfiguration implements TransactionManagementConfigurer
         String url = new StringBuilder()
                 .append("jdbc:")
                 .append("postgresql")
-                .append("://")
+                .append("://localhost")
                 .append(dbHost)
                 .append(":")
                 .append("5432")
-                .append("/")
+                .append("/SpringHotel")
                 .append(dbName)
-                .append("?user=")
+                .append("?user=postgres")
                 .append(dbUser)
-                .append("&password=")
+                .append("&password=postgres")
                 .append(dbPassword).toString();
 
         return  new SingleConnectionDataSource(url, false);
