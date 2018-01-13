@@ -11,7 +11,7 @@ import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.springframework.web.servlet.i18n.CookieLocaleResolver;
 import org.springframework.web.servlet.i18n.LocaleChangeInterceptor;
-import ro.springhotel.hotel.ComonModelInterceptor;
+import ro.springhotel.hotel.CommonModelInterceptor;
 
 import java.util.Locale;
 
@@ -22,7 +22,7 @@ public class MvcConfiguration extends WebMvcConfigurerAdapter {
     private String localFilesDir;
 
     @Autowired
-    private ComonModelInterceptor commonModelInterceptor;
+    private CommonModelInterceptor commonModelInterceptor;
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {

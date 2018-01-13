@@ -22,17 +22,17 @@ import javax.sql.DataSource;
 @EnableTransactionManagement
 public class ApplicationConfiguration implements TransactionManagementConfigurer{
 
-    @Value("${localhost}")
+    @Value("${db.host}")
     private String dbHost;
 
-    @Value("${postgres}")
+    @Value("${db.password}")
     private String dbPassword;
 
-    @Value("${postgres}")
+    @Value("${db.user}")
     private String dbUser;
 
 
-    @Value("${SpringHotel}")
+    @Value("${db.name}")
     private String dbName;
 
     @Bean
@@ -42,15 +42,6 @@ public class ApplicationConfiguration implements TransactionManagementConfigurer
         hotel.setDao(clientDAO());
         return hotel;
     }
-
-    	@Bean
-   public ClientDAO employeeDAO() {
-		return new JdbcHotelDAO("localhost",
-				"5432",
-				"SpringHotel",
-				"postgres" ,
-				"postgres");
-   }
 
     @Bean
     public ClientDAO clientDAO() {

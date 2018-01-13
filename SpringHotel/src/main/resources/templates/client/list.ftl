@@ -1,4 +1,7 @@
 [#ftl]
+[#import "/spring.ftl" as spring /]
+<!DOCTYPE html>
+
 <html>
 <header></header>
 <body>
