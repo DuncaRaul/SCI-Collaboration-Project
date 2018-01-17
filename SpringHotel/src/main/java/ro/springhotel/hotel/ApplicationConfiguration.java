@@ -11,7 +11,9 @@ import org.springframework.transaction.annotation.TransactionManagementConfigure
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import ro.springhotel.hotel.dao.ClientDAO;
 
+import ro.springhotel.hotel.dao.UserDAO;
 import ro.springhotel.hotel.dao.db.JdbcTemplateClientDAO;
+import ro.springhotel.hotel.dao.db.JdbcTemplateUserDao;
 import ro.springhotel.hotel.service.ClientService;
 
 import javax.sql.DataSource;
@@ -44,6 +46,11 @@ public class ApplicationConfiguration implements TransactionManagementConfigurer
     @Bean
     public ClientDAO clientDAO() {
         return new JdbcTemplateClientDAO(dataSource());
+    }
+
+    @Bean
+    public UserDAO userDAO() {
+        return new JdbcTemplateUserDao(dataSource());
     }
 
     @Bean

@@ -2,20 +2,17 @@ package ro.springhotel.hotel.dao.db;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import ro.springhotel.hotel.dao.ClientDAO;
-import ro.springhotel.hotel.domain.Client;
-import ro.springhotel.hotel.domain.Gender;
+import ro.springhotel.hotel.dao.UserDAO;
+import ro.springhotel.hotel.domain.User;
 
 import java.sql.*;
 import java.util.Collection;
 import java.util.LinkedList;
 import java.util.List;
 
-/**
- * @author Dani
- */
-public class JdbcClientDAO implements ClientDAO {
-    private static final Logger LOGGER = LoggerFactory.getLogger(JdbcClientDAO.class);
+public class JdbcUserDAO implements UserDAO {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(JdbcUserDAO.class);
 
     private String host;
     private String port;
@@ -23,21 +20,16 @@ public class JdbcClientDAO implements ClientDAO {
     private String userName;
     private String pass;
 
-
-
-
-    public JdbcClientDAO(String host, String port, String dbName, String userName, String pass) {
+    public JdbcUserDAO(String host, String port, String dbName, String userName, String pass) {
         this.host = host;
-        this.userName = userName;
-        this.pass = pass;
         this.port = port;
         this.dbName = dbName;
+        this.userName = userName;
+        this.pass = pass;
     }
 
-
-
     @Override
-    public Collection<Client> searchByName(String query) {
+    public Collection<User> searchByUserName(String query) {
         if (query == null) {
             query = "";
         } else {
@@ -46,64 +38,76 @@ public class JdbcClientDAO implements ClientDAO {
 
         Connection connection = newConnection();
 
-        Collection<Client> result = new LinkedList<>();
+        Collection<User> result = new LinkedList<>();
 
         try (ResultSet rs = connection.createStatement()
-                .executeQuery("select * from client "
-                        + "where lower(first_name || ' ' || last_name) like '%"
+                .executeQuery("select * from user_clients "
+                        + "where lower(user_name) like '%"
                         + query.toLowerCase() + "%'")) {
 
             while (rs.next()) {
-                result.add(extractClient(rs));
+                result.add(extractUser(rs));
             }
             connection.commit();
         } catch (SQLException ex) {
 
-            throw new RuntimeException("Error getting clients.", ex);
+            throw new RuntimeException("Error getting users.", ex);
         }
 
         return result;
     }
 
-    @Override
-    public Collection<Client> getAll() {
+//    private Boolean loginWithSucces(String userName, String password) {
+//        Boolean result = false;
+//
+//        try (Connection connection = newConnection();
+//             ResultSet rs = connection.createStatement()
+//                     .executeQuery("select user_name password from users where user_name = " + userName)) {
+//            result = true;
+//        } catch (SQLException ex) {
+//            throw new RuntimeException("Invalid username or password.", ex);
+//        }
+//
+//        return result;
+//
+//    }
 
-        Collection<Client> result = new LinkedList<>();
+    @Override
+    public Collection<User> getAll() {
+        Collection<User> result = new LinkedList<>();
 
         try (Connection connection = newConnection();
              ResultSet rs = connection.createStatement()
-                     .executeQuery("select * from client")) {
+                     .executeQuery("select * from user_clients")) {
 
             while (rs.next()) {
-                result.add(extractClient(rs));
+                result.add(extractUser(rs));
             }
             connection.commit();
         } catch (SQLException ex) {
 
-            throw new RuntimeException("Error getting clients.", ex);
+            throw new RuntimeException("Error getting users.", ex);
         }
 
         return result;
     }
 
-
-
     @Override
-    public Client findById(long id) {
+    public User findById(long id) {
         Connection connection = newConnection();
 
-        List<Client> result = new LinkedList<>();
+        List<User> result = new LinkedList<>();
 
         try (ResultSet rs = connection.createStatement()
-                .executeQuery("select * from client where id = " + id)) {
+                .executeQuery("select * from user_clients where id = " + id)) {
 
             while (rs.next()) {
-                result.add(extractClient(rs));
+                result.add(extractUser(rs));
             }
             connection.commit();
         } catch (SQLException ex) {
 
-            throw new RuntimeException("Error getting client.", ex);
+            throw new RuntimeException("Error getting user.", ex);
         } finally {
             try {
                 connection.close();
@@ -113,36 +117,34 @@ public class JdbcClientDAO implements ClientDAO {
         }
 
         if (result.size() > 1) {
-            throw new IllegalStateException("Multiple Clients for id: " + id);
+            throw new IllegalStateException("Multiple Users for id: " + id);
         }
         return result.isEmpty() ? null : result.get(0);
     }
 
-
     @Override
-    public Client update(Client model) {
+    public User update(User model) {
         Connection connection = newConnection();
         try {
             PreparedStatement ps = null;
             if (model.getId() > 0) {
                 ps = connection.prepareStatement(
-                        "update client set first_name=?, last_name=?, birth_date=?, gender = ? "
+                        "update user_clients set user_name=?, password=?, role = ? "
                                 + "where id = ? returning id");
 
             } else {
 
                 ps = connection.prepareStatement(
-                        "insert into employee (first_name, last_name, birth_date, gender) "
+                        "insert into user_clients (user_name, password, role) "
                                 + "values (?, ?, ?, ?) returning id" );
 
             }
-            ps.setString(1, model.getFirstName());
-            ps.setString(2, model.getLastName());
-            ps.setTimestamp(3, new Timestamp(model.getBirthDate().getTime()));
-            ps.setString(4, model.getGender().name());
+            ps.setString(1, model.getUserName());
+            ps.setString(2, model.getPassword());
+            ps.setString(3, model.getRole());
 
             if (model.getId() > 0) {
-                ps.setLong(5, model.getId());
+                ps.setLong(4, model.getId());
             }
 
             ResultSet rs = ps.executeQuery();
@@ -155,7 +157,7 @@ public class JdbcClientDAO implements ClientDAO {
 
         } catch (SQLException ex) {
 
-            throw new RuntimeException("Error getting clients.", ex);
+            throw new RuntimeException("Error getting users.", ex);
         } finally {
             try {
                 connection.close();
@@ -168,12 +170,12 @@ public class JdbcClientDAO implements ClientDAO {
     }
 
     @Override
-    public boolean delete(Client model) {
+    public boolean delete(User model) {
         boolean result = false;
         Connection connection = newConnection();
         try {
             Statement statement = connection.createStatement();
-            result = statement.execute("delete from employee where id = " + model.getId());
+            result = statement.execute("delete from user_clients where id = " + model.getId());
             connection.commit();
         } catch (SQLException ex) {
 
@@ -215,14 +217,13 @@ public class JdbcClientDAO implements ClientDAO {
 
     }
 
-    private Client extractClient(ResultSet rs) throws SQLException {
-        Client client = new Client();
-        client.setId(rs.getLong("id"));
-        client.setFirstName(rs.getString("first_name"));
-        client.setLastName(rs.getString("last_name"));
-        client.setBirthDate(new java.util.Date(rs.getTimestamp("birth_date").getTime()));
-        client.setGender(Gender.valueOf(rs.getString("gender")));
-        return client;
+    private User extractUser(ResultSet rs) throws SQLException {
+        User user = new User();
+        user.setId(rs.getLong("id"));
+        user.setUserName(rs.getString("user_name"));
+        user.setPassword(rs.getString("password"));
+        user.setRole(rs.getString("role"));
+        return user;
 
     }
 }

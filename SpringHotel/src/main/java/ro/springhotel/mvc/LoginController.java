@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.view.RedirectView;
 import ro.springhotel.hotel.domain.Client;
+import ro.springhotel.hotel.service.UserService;
 
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -32,8 +33,10 @@ public class LoginController {
     @RequestMapping("/onLogin")
     public ModelAndView onLogin(String userName, String pass, HttpServletRequest request) {
         ModelAndView modelAndView = new ModelAndView();
+        UserService userService = new UserService();
         //use UserService to check the login
         boolean loginWithSucces = true;
+        loginWithSucces = userService.validateLogin(userName,pass);
         if (loginWithSucces) {
             Client client = new Client();
             client.setUserName(userName);
