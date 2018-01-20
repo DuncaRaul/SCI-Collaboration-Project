@@ -22,29 +22,43 @@ import javax.sql.DataSource;
 @EnableGlobalMethodSecurity(jsr250Enabled = true)
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
-    @Autowired
-    private BCryptPasswordEncoder bCryptPasswordEncoder;
+//    @Autowired
+//    private BCryptPasswordEncoder bCryptPasswordEncoder;
 
-    @Autowired
-    private DataSource dataSource;
+//    @Autowired
+//    private DataSource dataSource;
 
     @Value("$(spring.queries.users-query)")
     private String usersQuery;
 
-    @Value("$(spring.queries.roles-query)")
-    private String rolesQuery;
+//    @Value("$(spring.queries.roles-query)")
+//    private String rolesQuery;
 
-    @Override
-    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 
-        auth.
-                jdbcAuthentication()
-                .usersByUsernameQuery(usersQuery)
-                .authoritiesByUsernameQuery(rolesQuery)
-                .dataSource(dataSource)
-                .passwordEncoder(bCryptPasswordEncoder);
+    @Autowired
+    DataSource dataSource;
 
+    @Autowired
+    public void configAuthentication(AuthenticationManagerBuilder auth) throws Exception {
+
+        auth.jdbcAuthentication().dataSource(dataSource)
+                .usersByUsernameQuery(
+                        "select user_name,password from user_clients where user_name=?")
+                .authoritiesByUsernameQuery(
+                        "select user_name, role from user_clients where user_name=?");
     }
+
+//    @Override
+//    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+//
+//        auth.
+//                jdbcAuthentication()
+//                .usersByUsernameQuery(usersQuery)
+//                //.authoritiesByUsernameQuery(rolesQuery)
+//                .dataSource(dataSource);
+//        //.passwordEncoder(bCryptPasswordEncoder);
+//
+//    }
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
@@ -68,7 +82,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     }
 
     @Override
-    public void configure (WebSecurity web) throws Exception {
+    public void configure(WebSecurity web) throws Exception {
         web
                 .ignoring()
                 .antMatchers("/resources/**", "/static/**", "/css/**", "/js/**", "/images/**", "/ext-img/**");

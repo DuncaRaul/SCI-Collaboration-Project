@@ -29,16 +29,19 @@ public class UserService {
 
     private static final Logger LOGGER = (Logger) LoggerFactory.getLogger(Client.class);
 
+//    @Autowired
+//    private UserDAO dao;
+
     @Autowired
-    private UserDAO dao;
+    private JdbcUserDAO jdbcUserDAO;
 
     @RolesAllowed("ADMIN")
     @Transactional(readOnly = false, value="txn")
     public boolean delete(Long id){
         LOGGER.debug("Deleting client for id: " + id);
-        User user = dao.findById(id);
+        User user = jdbcUserDAO.findById(id);
         if (user != null){
-            dao.delete(user);
+            jdbcUserDAO.delete(user);
             return true;
         }
 
@@ -47,7 +50,7 @@ public class UserService {
 
     public User get(Long id) {
         LOGGER.debug("Getting client for id: " + id);
-        return dao.findById(id);
+        return jdbcUserDAO.findById(id);
     }
 
     @Transactional(readOnly = false, value = "txn")
@@ -55,7 +58,7 @@ public class UserService {
         LOGGER.debug("Saving: " + user);
         validate(user);
 
-        dao.update(user);
+        jdbcUserDAO.update(user);
     }
 
     private void validate(User user) throws ValidationException {
@@ -84,12 +87,11 @@ public class UserService {
 
     public Boolean validateLogin(String user, String pass) {
 
-        JdbcUserDAO dao = null;
         Boolean userCheck = false;
         Boolean passCheck = false;
         Boolean result = false;
 
-        Collection<User> currentUser = dao.searchByUserName(user);
+        Collection<User> currentUser = jdbcUserDAO.searchByUserName(user);
 
 
         for (User u:

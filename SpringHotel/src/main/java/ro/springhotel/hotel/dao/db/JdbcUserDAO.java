@@ -136,7 +136,7 @@ public class JdbcUserDAO implements UserDAO {
 
                 ps = connection.prepareStatement(
                         "insert into user_clients (user_name, password, role) "
-                                + "values (?, ?, ?, ?) returning id" );
+                                + "values (?, ?, ?) returning id" );
 
             }
             ps.setString(1, model.getUserName());
