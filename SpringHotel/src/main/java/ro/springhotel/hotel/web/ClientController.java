@@ -18,7 +18,7 @@ import java.util.Collection;
         @Autowired
         private ClientService clientService;
 
-        private int index = 0;
+        private int index = 1;
 
         @RequestMapping("")
         public ModelAndView list()  throws ValidationException {
