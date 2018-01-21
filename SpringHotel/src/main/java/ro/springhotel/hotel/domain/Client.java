@@ -1,5 +1,7 @@
 package ro.springhotel.hotel.domain;
 
+import ro.springhotel.hotel.web.HomepageController;
+
 import java.util.Date;
 
 /**
@@ -135,6 +137,7 @@ public class Client extends AbstractModel {
         result = 31 * result + (hasPet ? 1 : 0);
         return result;
     }
+
 }
 
 

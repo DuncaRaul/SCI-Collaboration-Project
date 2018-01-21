@@ -18,7 +18,7 @@ import java.util.Collection;
         @Autowired
         private ClientService clientService;
 
-        private int index = 1;
+        private int index = 0;
 
         @RequestMapping("")
         public ModelAndView list()  throws ValidationException {
@@ -54,4 +54,15 @@ import java.util.Collection;
         public String displayAddPage() {
             return "/client/add_client";
         }
+
+        @RequestMapping("/login")
+        public String loginView() {
+            return ("/client/login");
+        }
+
+        @RequestMapping("/register")
+        public String registerView() {
+            return ("/client/register");
+        }
+
     }
