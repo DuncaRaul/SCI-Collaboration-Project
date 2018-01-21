@@ -47,11 +47,23 @@ import java.util.Collection;
 
             clientService.save(client);
 
-            return "redirect:/client";
+            return "redirect:/login";
         }
 
-        @RequestMapping("/add")
-        public String displayAddPage() {
-            return "/client/add_client";
+        @RequestMapping("/register")
+        public String displayRegisterPage() {
+            return "/client/register_client";
+        }
+
+        @RequestMapping("/login")
+        public String displayLoginPage() {
+            Collection<Client> clientList = clientService.listAll();
+            Boolean b = false;
+            for (Client c:
+                    clientList) {
+//                if (c.getUserName().equals())
+
+            }
+            return "/auth/login";
         }
     }

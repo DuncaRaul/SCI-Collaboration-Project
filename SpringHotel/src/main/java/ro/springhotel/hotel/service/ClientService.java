@@ -9,8 +9,10 @@ import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.StringUtils;
 import ro.springhotel.hotel.dao.ClientDAO;
+import ro.springhotel.hotel.dao.inmemory.IMClientDAO;
 import ro.springhotel.hotel.domain.Client;
 
 
@@ -18,6 +20,7 @@ import ro.springhotel.hotel.domain.Client;
 public class ClientService {
     private static final Logger LOGGER = LoggerFactory.getLogger(ClientService.class);
 
+    @Autowired
     private ClientDAO dao;
 
     public Collection<Client> listAll() {
@@ -84,6 +87,14 @@ public class ClientService {
 
         }
 
+        if (client.getUserName() == null) {
+            errors.add("UserName is Empty");
+        }
+        if (client.getPassword() == null) {
+            errors.add("Password is Empty");
+        }
+
+
 
         if (!errors.isEmpty()) {
             throw new ValidationException(errors.toArray(new String[] {}));
@@ -97,6 +108,32 @@ public class ClientService {
     public void setDao(ClientDAO dao) {
         this.dao = dao;
     }
+
+    public boolean validateLogin(String user, String pass) {
+
+        boolean userCheck = false;
+        boolean passCheck = false;
+        boolean result = false;
+
+        Collection<Client> currentUser = dao.searchByName(user);
+
+
+        for (Client c:
+                currentUser) {
+            if (c.getUserName().equals(user)){
+                userCheck = true;
+            }
+            if (c.getPassword().equals(pass)){
+                passCheck = true;
+            }
+
+        }
+
+        if (userCheck && passCheck){result = true;}
+
+        return result;
+    }
+
 
 
 }
