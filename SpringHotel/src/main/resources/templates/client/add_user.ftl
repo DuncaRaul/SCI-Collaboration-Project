@@ -1,4 +1,5 @@
 [#ftl]
+
 <form method="POST" action="/client/save">
     <p>Username: <input type="text" name="userName" value="${client.userName}"/></p>
     <p>Password: <input type="text" name="password" value="${client.password}"/></p>
@@ -8,7 +9,7 @@
     <p>Birth Date: <input type="text" name="birthDate" value="${client.birthDate?string('dd/MM/yyyy')}"/></p>
 
 
-    <p><input type="submit" value="submit"/>
+    <p><input type="submit" value="PTIZDA"/>
 
         <input type="hidden" name="id" value="${client.id?c}"/>
 </form>

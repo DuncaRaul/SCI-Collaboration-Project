@@ -9,6 +9,8 @@
 <a href="/client/add">ADD</a>
 <table>
 <tr>
+    <th>user name</th>
+    <th>password</th>
     <th>first name</th>
     <th>last name</th>
     <th>gender</th>
@@ -19,6 +21,8 @@
 
 [#list clients as client]
 <tr>
+    <td>${client.userName}</td>
+    <td>${client.password}</td>
     <td>${client.firstName}</td>
     <td>${client.lastName}</td>
     <td>${client.gender}</td>

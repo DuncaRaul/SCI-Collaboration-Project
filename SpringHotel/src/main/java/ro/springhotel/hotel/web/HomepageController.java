@@ -7,15 +7,41 @@ import org.springframework.web.servlet.ModelAndView;
 import ro.springhotel.hotel.service.ValidationException;
 
 @Controller
-    @RequestMapping("/homepage")
-    public class HomepageController {
+@RequestMapping("/homepage")
+public class HomepageController {
 
-        @RequestMapping("")
-    public ModelAndView view() {
-            ModelAndView result = new ModelAndView("/home");
-            return result;
-        }
 
+    @RequestMapping("")
+    public String homepageView() {
+
+        return "/homepage";
     }
+
+    @RequestMapping("/register")
+    public String registerView() {
+
+        return "/register";
+    }
+
+    @RequestMapping("/contact")
+    public String contactView() {
+        return "/contact";
+    }
+
+    @RequestMapping("/booking")
+    public String bookingView() {
+        return "/booking";
+    }
+
+    @RequestMapping("/details")
+    public String detailsView() {
+        return "/details";
+    }
+
+    @RequestMapping("/facilities")
+    public String facilitiesView() {
+        return "/facilities";
+    }
+}
 
 

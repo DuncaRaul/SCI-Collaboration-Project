@@ -28,7 +28,7 @@ ul,label{
 	padding:0;
 }
 a:hover, a:focus {
-
+color:none;
 text-decoration: none;
 }
 /*-----start-header----*/
@@ -202,10 +202,8 @@ margin-left: 1em;
 	text-transform: capitalize;
 	margin-bottom: 6px;
 }
-
-
 select {
-	width: 20%;
+	width: 100%;
 	color: #858585;
 	font-size: 0.8725em;
 	padding: 7px;
@@ -217,7 +215,7 @@ select {
 	-webkit-border-radius: 9px;
 	-moz-border-radius: 9px;
 	-o-border-radius: 9px;
-
+	
 }
 select option{
 	border: 1px solid #DFDFDF;
@@ -227,12 +225,6 @@ select option{
 	-o-transition: all 0.3s ease-in-out;
 	transition: all 0.3s ease-in-out;
 }
-
-
-
-
-
-
 .book_date input[type="text"]{
 	width: 100% !important;
 	color: #858585;
@@ -281,36 +273,6 @@ select option{
 .date_btn form input[type="submit"]:hover{
 	background: #00CCFF;
 }
-
-.date_btn form input[type="chestie"] {
-	text-transform:capitalize;
-	width: 90% !important;
-	background: #FFD700;
-	font-family: 'Open Sans', sans-serif;
-	color: #2A2E33;
-	padding: 8px;
-	border: none;
-	font-size: 14px;
-	transition: 0.5s all;
-	-webkit-transition: 0.5s all;
-	-moz-transition: 0.5s all;
-	-o-transition: 0.5s all;
-	outline: none;
-	cursor: pointer;
-	font-weight:bold;
-	border-radius: 9px;
-	-webkit-border-radius: 9px;
-	-moz-border-radius: 9px;
-	-o-border-radius: 9px;
-}
-.date_btn form input[type="chestie"]:hover{
-	background: #00CCFF;
-}
-
-
-
-
-
 /* start grids_of_3 */
 .grids_of_3{
 	display: block;
@@ -376,7 +338,7 @@ select option{
 .copy p a:hover{
 	color: #9c9c9c;
 }
-
+}
 /* start soc_icons */
 .soc_icons {
 	text-align: center;
@@ -397,6 +359,7 @@ select option{
 }
 .soc_icons ul li a{
 	display: block;
+	background: url('../images/soc_icons.png') no-repeat 0px 0px;
 	width: 46px;
 	height: 46px;
 	-webkit-transition: all 0.3s ease-in-out;
@@ -518,6 +481,7 @@ p.para{
 }
 .s_nav1 li a{
 	display: block;
+	background: url('../images/s_icons.png') no-repeat 0px 0px;
 	width: 32px;
 	height: 32px;
 	-webkit-transition: all 0.3s ease-in-out;
@@ -925,90 +889,6 @@ background:#333333;
 border:2px solid #fff;
 color:#fff;
 }
-
-
-
-
-
-.memberr{
-	width: 35%;
-	position: relative;
-	left: 33%;
-	text-align: left;
-
-}
-.memberr h4{
-	color:#fff;
-	font-size:16px;
-	margin-bottom:1.2em;
-}
-.memberr p{
-	font-size: 13px;
-	color: #008c15;
-	font-weight: 100;
-	margin: 5px;
-}
-.memberr form input[type="text"]{
-	color:#fff;
-	border:1px solid #1A1A1A;
-	outline:none;
-	margin-bottom: 10px;
-	font-size:14px;
-	padding:3px 12px;
-	width:92%!important;
-	background:#333333;
-	border-radius:10px;
-	-webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
-	-ms-border-radius: 10px;
-	-o-border-radius: 10x;
-}
-.memberr form input[type="password"]{
-	color:#fff;
-	border:1px solid #1A1A1A;
-	outline:none;
-	margin-top: 10px;
-	font-size:14px;
-	padding:3px 12px;
-	width:92%!important;
-	background:#333333;
-	border-radius:10px;
-	-webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
-	-ms-border-radius: 10px;
-	-o-border-radius: 10px;
-}
-.memberr form input[type="text"]:hover,.member form input[type="password"]:hover{
-	border:1px solid #fff;
-}
-.memberr form input[type="submit"]{
-	color: #2B2A1F;
-	background: #E7CB2C;
-	font-size: 12px;
-	padding: 4px 17px;
-	font-weight: bold;
-	border-radius: 10px;
-	-webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
-	-ms-border-radius: 10px;
-	-o-border-radius: 10px;
-	margin-top: 1em;
-	width: 41% ! important;
-	outline:none;
-	border:2px solid #E7CB2C;
-	transition:0.5s all;
-	-webkit-transition:0.5s all;
-	-moz-transition:0.5s all;
-	-o-transition:0.5s all;
-	-ms-transition:0.5s all;
-}
-.memberr form input[type="submit"]:hover{
-	background:#333333;
-	border:2px solid #fff;
-	color:#fff;
-}
-
-
 .fotter-info h6 {
 text-align:center;
 color:#fff;
@@ -1274,12 +1154,12 @@ line-height: 1.8em;
 	margin-top: 2em;
 }
 .start:before{
-
+	content: url(../images/quote-1.png);
 	vertical-align: super;
 	padding-right:5px;
 }
 .end:after{
-
+	content: url(../images/quote-2.png);
 	vertical-align: super;
 	padding-right:5px;
 }
@@ -1811,7 +1691,7 @@ padding-top: 2em;
 padding-top: 1.3em;
 }
 .logo img {
-width: 85%;
+width: 95%;
 }
 .top-menu ul li a {
 padding: 2.1em 0.5em;
@@ -2032,7 +1912,7 @@ padding: 1em;
 width: 30%;
 }
 .logo img {
-width: 80%;
+width: 100%;
 }
 .top-menu ul li a {
 padding: 2em 0.5em;
@@ -2395,7 +2275,7 @@ width: 100%;
 @media (max-width:480px){
 .logo {
 padding: 0.7em;
-width: 50%;
+width: 60%;
 }
 span.menu {
 margin: 8px 10px 0 0;
