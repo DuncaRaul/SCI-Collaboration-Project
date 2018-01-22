@@ -4,6 +4,7 @@ import ro.springhotel.hotel.web.HomepageController;
 
 import java.util.Date;
 
+
 /**
  * @author Dani
  */
@@ -18,6 +19,7 @@ public class Client extends AbstractModel {
     private float budget;
     private boolean hasCar;
     private boolean hasPet;
+
 
     public String getUserName() {
         return userName;
@@ -137,6 +139,7 @@ public class Client extends AbstractModel {
         result = 31 * result + (hasPet ? 1 : 0);
         return result;
     }
+
 
 }
 

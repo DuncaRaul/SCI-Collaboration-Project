@@ -19,19 +19,19 @@
     <div class="top-header">
         <div class="container">
             <div class="logo">
-                <a href="/./homepage"><img src="/images/logo.png"/></a>
+                <a href="/./homepage_client"><img src="/images/logo.png"/></a>
                 <div class="clearfix"></div>
             </div>
             <span class="menu"> </span>
             <div class="m-clear"></div>
             <div class="top-menu">
                 <ul>
-                    <li><a href="/./homepage">START</a></li>
-                    <li><a href="/./homepage/facilities">FACILITIES</a></li>
-                    <li><a href="/./client/login">BOOKING</a></li>
-                    <li><a href="/./homepage/details">DETAILS</a></li>
-                    <li><a href="/./homepage/contact">CONTACT US</a></li>
-                    <li><a href="/./client/login">LOGIN</a></li>
+                    <li><a href="/./homepage_client">START</a></li>
+                    <li><a href="/./homepage_client/facilities_client">FACILITIES</a></li>
+                    <li><a href="/./homepage_client/booking_client">BOOKING</a></li>
+                    <li><a href="/./homepage_client/details_client">DETAILS</a></li>
+                    <li><a  href="/./homepage_client/contact_client">CONTACT US</a></li>
+                    <li><a href="/./homepage">LOGOUT</a></li>
                     <div class="clearfix"></div>
                 </ul>
                 <script>
@@ -54,16 +54,16 @@
                 </div>
                 <div class="det_text">
                     <p class="para">It can be a place for you only where you can enjoy some quality time. We have a wide range of spa offers, with masseurs specialized in
-                    Chinese, Thai, Japanese and hot rocks massages. Also, if you want a day off of your busy schedule we have high quality Wi-Fi so that you can watch your
-                    favourite movies cum ar fi sa te uiti si tu altundeva pentru numele lu Dumnezăul meu fara de care nu eram eu si Iisusul sfant care ne-a adus pe acest pamant because our hotel is the best in the business.
-                    Chiar nu inteleg de ce continui sa citesti chestia asta pentru ca aici nu o sa gasesti nicio informatie utila in legatura cu efortul depus pentru a crea acest site.
-                    Asta ii un text. Get a grip. Furthermore, our hotel has a skilled crew that can take care of any spots that may get onto your clothes. Rest assured that Spring Hotel
-                    is an amazing choice, and you won't regret chosing us.</p>
+                        Chinese, Thai, Japanese and hot rocks massages. Also, if you want a day off of your busy schedule we have high quality Wi-Fi so that you can watch your
+                        favourite movies cum ar fi sa te uiti si tu altundeva pentru numele lu Dumnezăul meu fara de care nu eram eu si Iisusul sfant care ne-a adus pe acest pamant because our hotel is the best in the business.
+                        Chiar nu inteleg de ce continui sa citesti chestia asta pentru ca aici nu o sa gasesti nicio informatie utila in legatura cu efortul depus pentru a crea acest site.
+                        Asta ii un text. Get a grip. Furthermore, our hotel has a skilled crew that can take care of any spots that may get onto your clothes. Rest assured that Spring Hotel
+                        is an amazing choice, and you won't regret chosing us.</p>
                     <p class="para">Spring Hotel is the perfect oasis for food lovers as we have the best chefs in Spring Country that work passionately in order to offer
-                    our clients the best dishes out there. You can enjoy your meal either at our restaurant sau comanda-ti in puii mei o pizza ca nu mai am chef sa scriu
-                    rahaturile astea ca ma doare capu si is bat. We have 3 different room types: single rooms, apartments, and a penthouse, si daca nu-ti convine du-te
-                    dracului. The penthouse has a gorgeous view over the city and it is guaranteed to stay printed on your retina for at least a year, also giving you the chance to
-                    make selfies that your friends will envy. Choose Spring Hotel, we won't disappoint you.</p>
+                        our clients the best dishes out there. You can enjoy your meal either at our restaurant sau comanda-ti in puii mei o pizza ca nu mai am chef sa scriu
+                        rahaturile astea ca ma doare capu si is bat. We have 3 different room types: single rooms, apartments, and a penthouse, si daca nu-ti convine du-te
+                        dracului. The penthouse has a gorgeous view over the city and it is guaranteed to stay printed on your retina for at least a year, also giving you the chance to
+                        make selfies that your friends will envy. Choose Spring Hotel, we won't disappoint you.</p>
                     <div class="read_more">
                         <a href="http://lmgtfy.com/?q=du-te+dracului">read more</a>
                     </div>
@@ -104,17 +104,6 @@
                 <a href="#">12 DEC</a>
             </div>
             <div class="clearfix"></div>
-        </div>
-        <div class="member">
-            <h4>MEMBERS AREA</h4>
-            <form>
-                <p>Username</p>
-                <input type="text" placeholder="username" required/>
-                <p>Password</p>
-                <input type="password" placeholder="password" required/>
-                <input type="submit" value="LOGIN"/>
-                <input type="submit" value="REGISTER"/>
-            </form>
         </div>
         <div class="clearfix"></div>
     </div>

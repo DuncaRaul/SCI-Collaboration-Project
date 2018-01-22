@@ -42,6 +42,8 @@ public class HomepageController {
     public String facilitiesView() {
         return "/facilities";
     }
+
+
 }
 
 

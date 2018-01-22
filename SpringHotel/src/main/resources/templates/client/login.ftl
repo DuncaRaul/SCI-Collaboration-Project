@@ -25,9 +25,9 @@
                 <ul>
                     <li><a href="/./homepage">START</a></li>
                     <li><a href="/./homepage/facilities">FACILITIES</a></li>
-                    <li><a href="/./homepage/booking">BOOKING</a></li>
-                    <li><a href="/./homepage/contact">CONTACT US</a></li>
+                    <li><a href="/./client/login">BOOKING</a></li>
                     <li><a href="/./homepage/details">DETAILS</a></li>
+                    <li><a href="/./homepage/contact">CONTACT US</a></li>
                     <li><a href="login">LOGIN</a></li>
 
                 </ul>
@@ -49,12 +49,24 @@
             <div class="memberr">
 
 
-                <form>
-                    <input type="text" placeholder="username" required/>
-                    <p></p>
-                    <input type="password" placeholder="password" required/>
+                <form method="POST" action="/client/loginn">
+                    <p>Username: <input type="text" name="userName"/></p>
+                    <p>Password: <input type="password" name="password"/></p>
+                    <input type="hidden" name="firstName" value="caca"/>
+                    <input type="hidden" name="lastName" value="raca"/>
+                    <input type="hidden" name="birthDate" value="12/12/1992"/>
+
+
+
+                        <input type="hidden" name="gender" value="MALE"/>
+
+
                     <input type="submit" value="LOGIN"/>
-                    <input type="submit" value="REGISTER"/>
+
+                </form>
+
+                <form method="GET" action ="/client/register">
+                    <input type="submit" value="REGISTER">
                 </form>
 
             </div>

@@ -9,6 +9,8 @@
 <a href="/client/add">ADD</a>
 <table>
 <tr>
+    <th>user name</th>
+    <th>password</th>
     <th>first name</th>
     <th>last name</th>
     <th>gender</th>

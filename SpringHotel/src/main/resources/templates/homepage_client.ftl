@@ -17,18 +17,18 @@
     <div class="top-header">
         <div class="container">
             <div class="logo">
-                <a href="homepage"><img src="/images/logo.png"/></a>
+                <a href="/*/homepage_client"><img src="/images/logo.png"/></a>
             </div>
             <span class="menu"> </span>
             <div class="m-clear"></div>
             <div class="top-menu">
                 <ul>
-                    <li><a href="homepage">START</a></li>
-                    <li><a href="homepage/facilities">FACILITIES</a></li>
-                    <li><a href="client/login">BOOKING</a></li>
-                    <li><a href="homepage/details">DETAILS</a>
-                    <li><a href="homepage/contact">CONTACT US</a></li>
-                    <li><a href="client/login">LOGIN</a></li>
+                    <li><a href="/./homepage_client">START</a></li>
+                    <li><a href="/./homepage_client/facilities_client">FACILITIES</a></li>
+                    <li><a href="/./homepage_client/booking_client">BOOKING</a></li>
+                    <li><a href="/./homepage_client/details_client">DETAILS</a></li>
+                    <li><a  href="/./homepage_client/contact_client">CONTACT US</a></li>
+                    <li><a href="/./homepage">LOGOUT</a></li>
 
                 </ul>
                 <script>
@@ -81,7 +81,7 @@
 <!---->
 <div class="package text-center">
     <div class="container">
-        <h3><a href="client/login">Book a room!</a></h3>
+        <h3><a href="homepage/booking">Book a room!</a></h3>
         <p></p>
         <p>Spring Hotel was designed in such a way that it suits anyone's needs. From single rooms to a penthouse, we
             guarantee that you will not regret
@@ -212,31 +212,7 @@
             </div>
             <div class="clearfix"></div>
         </div>
-        <div class="member">
-            <h4>MEMBERS AREA</h4>
 
-            <form method="POST" action="/client/loginn">
-                <p>Username: <input type="text" name="userName"/></p>
-                <p>Password: <input type="password" name="password"/></p>
-                <input type="hidden" name="firstName" value="caca"/>
-                <input type="hidden" name="lastName" value="raca"/>
-                <input type="hidden" name="birthDate" value="12/12/1992"/>
-
-
-
-                <input type="hidden" name="gender" value="MALE"/>
-
-
-                <input type="submit" value="LOGIN"/>
-
-            </form>
-
-            <form method="GET" action ="/client/register">
-                <input type="submit" value="REGISTER">
-            </form>
-
-
-        </div>
         <div class="clearfix"></div>
     </div>
     <div class="clearfix"></div>

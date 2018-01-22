@@ -18,19 +18,19 @@
     <div class="top-header">
         <div class="container">
             <div class="logo">
-                <a href="/./homepage"><img src="/images/logo.png"/></a>
+                <a href="/./homepage_client"><img src="/images/logo.png"/></a>
                 <div class="clearfix"></div>
             </div>
             <span class="menu"> </span>
             <div class="m-clear"></div>
             <div class="top-menu">
                 <ul>
-                    <li><a href="/./homepage">START</a></li>
-                    <li><a href="/./homepage/facilities">FACILITIES</a></li>
-                    <li><a href="/./client/login">BOOKING</a></li>
-                    <li><a href="/./homepage/details">DETAILS</a></li>
-                    <li><a href="/./homepage/contact">CONTACT US</a></li>
-                    <li><a href="/./client/login">LOGIN</a></li>
+                    <li><a href="/./homepage_client">START</a></li>
+                    <li><a href="/./homepage_client/facilities_client">FACILITIES</a></li>
+                    <li><a href="/./homepage_client/booking_client">BOOKING</a></li>
+                    <li><a href="/./homepage_client/details_client">DETAILS</a></li>
+                    <li><a  href="/./homepage_client/contact_client">CONTACT US</a></li>
+                    <li><a href="/./homepage">LOGOUT</a></li>
                     <div class="clearfix"></div>
                 </ul>
                 <script>
@@ -135,17 +135,6 @@
                 <a href="#">12 DEC</a>
             </div>
             <div class="clearfix"></div>
-        </div>
-        <div class="member">
-            <h4>MEMBERS AREA</h4>
-            <form>
-                <p>Username</p>
-                <input type="text" placeholder="username" required/>
-                <p>Password</p>
-                <input type="password" placeholder="password" required/>
-                <input type="submit" value="LOGIN"/>
-                <input type="submit" value="REGISTER"/>
-            </form>
         </div>
         <div class="clearfix"></div>
     </div>

@@ -1,4 +1,5 @@
 [#ftl]
+
 <form method="POST" action="/client/save">
     <p>Username: <input type="text" name="userName" value="${client.userName}"/></p>
     <p>Password: <input type="text" name="password" value="${client.password}"/></p>
