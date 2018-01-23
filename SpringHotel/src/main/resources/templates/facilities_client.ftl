@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>hotel-fortune bootstrap Design website | Home :: w3layouts</title>
+    <title>SPRING Hotel</title>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:600italic,700italic,800italic,400,300,600,700,800'
           rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Pinyon+Script' rel='stylesheet' type='text/css'>
@@ -29,7 +29,7 @@
                     <li><a href="/./homepage_client/facilities_client">FACILITIES</a></li>
                     <li><a href="/./homepage_client/booking_client">BOOKING</a></li>
                     <li><a href="/./homepage_client/details_client">DETAILS</a></li>
-                    <li><a  href="/./homepage_client/contact_client">CONTACT US</a></li>
+                    <li><a href="/./homepage_client/contact_client">CONTACT US</a></li>
                     <li><a href="/./homepage">LOGOUT</a></li>
                     <div class="clearfix"></div>
                 </ul>
@@ -55,8 +55,10 @@
                         </a>
                     </div>
                     <a href="details.html"><h3>Wi-Fi-Internet</h3></a>
-                    <p class="para">We know that you want to be permanently connected to the online environment, so we got you covered.</p>
-                    <p class="para">The lobby, the restaurant and every room is covered by strong Wi-Fi signal so you won't have to worry about not responding to important messages. </p>
+                    <p class="para">We know that you want to be permanently connected to the online environment, so we
+                        got you covered.</p>
+                    <p class="para">The lobby, the restaurant and every room is covered by strong Wi-Fi signal so you
+                        won't have to worry about not responding to important messages. </p>
                 </li>
                 <li>
                     <div class="ser_img">
@@ -67,7 +69,8 @@
                     </div>
                     <a href="details.html"><h3>Best Cooking</h3></a>
                     <p class="para">We have 10 skilled chefs to suit your culinary needs.</p>
-                    <p class="para"> This multicultural team of chefs assures a varied menu to satisfy everyone, regardless of culture.</p>
+                    <p class="para"> This multicultural team of chefs assures a varied menu to satisfy everyone,
+                        regardless of culture.</p>
                 </li>
                 <li>
                     <div class="ser_img">
@@ -78,7 +81,8 @@
                     </div>
                     <a href="details.html"><h3>Laundry</h3></a>
                     <p class="para">At Spring Hotel, you don't need to worry about a single stain.</p>
-                    <p class="para">Whatever happens to your clothes, just put them in the provided basket from your room, being assured that the next morning your clothes will be clean and fresh.</p>
+                    <p class="para">Whatever happens to your clothes, just put them in the provided basket from your
+                        room, being assured that the next morning your clothes will be clean and fresh.</p>
                 </li>
                 <li>
                     <div class="ser_img">
@@ -88,8 +92,10 @@
                         </a>
                     </div>
                     <a href="details.html"><h3>Spa</h3></a>
-                    <p class="para">If you ever feel tired, sore, or just in need for a massage, your desires will be fulfilled by Spring Hotel. </p>
-                    <p class="para">Our highly skilled masseurs will be sure to relieve any muscular tension and make you feel blissful. </p>
+                    <p class="para">If you ever feel tired, sore, or just in need for a massage, your desires will be
+                        fulfilled by Spring Hotel. </p>
+                    <p class="para">Our highly skilled masseurs will be sure to relieve any muscular tension and make
+                        you feel blissful. </p>
                 </li>
                 <div class="clear"></div>
             </ul>

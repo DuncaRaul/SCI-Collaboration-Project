@@ -46,25 +46,30 @@
     <div class="package text-center">
         <div class="container">
             <!-- requried-jsfiles-for owl -->
+
+            <h4 style="color:red">Invalid username or password.</h4>
+            <p></p>
+
             <div class="memberr">
 
 
-                <form method="POST" action="/client/save">
+                <form method="POST" action="/client/loginn">
                     <p>Username: <input type="text" name="userName"/></p>
                     <p>Password: <input type="password" name="password"/></p>
-                    <p>First name: <input type="text" name="firstName"/></p>
-                    <p>Last name: <input type="text" name="lastName"/></p>
-                    <p>Birthdate: <input type="text" name="birthDate" placeholder="MM/dd/YYYY"</p>
+                    <input type="hidden" name="firstName" value="caca"/>
+                    <input type="hidden" name="lastName" value="raca"/>
+                    <input type="hidden" name="birthDate" value="12/12/1992"/>
 
-                    <p>Gender:
-                        <input type="text" name="gender" list="genders"/>
-                        <datalist id="genders">
-                            <option value="MALE">Male</option>
-                            <option value="FEMALE">Female</option>
-                            <option value="UNSPECIFIED">Unspecified</option>
-                        </datalist>
-                    </p>
-                    <input type="submit" value="REGISTER"/>
+
+                    <input type="hidden" name="gender" value="MALE"/>
+
+
+                    <input type="submit" value="LOGIN"/>
+
+                </form>
+
+                <form method="GET" action="/client/register">
+                    <input type="submit" value="REGISTER">
                 </form>
 
             </div>

@@ -12,7 +12,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.util.StringUtils;
 import ro.springhotel.hotel.dao.ClientDAO;
 import ro.springhotel.hotel.domain.Client;
-
+import ro.springhotel.hotel.domain.Room;
 
 
 public class ClientService {
@@ -24,7 +24,7 @@ public class ClientService {
         return dao.getAll();
     }
 
-    public Collection<Client> search( String query) {
+    public Collection<Client> search(String query) {
         LOGGER.debug("Searching for " + query);
         return dao.searchByName(query);
     }
@@ -52,6 +52,7 @@ public class ClientService {
 
         dao.update(client);
     }
+
 
     private void validate(Client client) throws ValidationException {
         Date currentDate = new Date();
@@ -86,7 +87,7 @@ public class ClientService {
 
 
         if (!errors.isEmpty()) {
-            throw new ValidationException(errors.toArray(new String[] {}));
+            throw new ValidationException(errors.toArray(new String[]{}));
         }
     }
 

@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>hotel-fortune bootstrap Design website | Home :: w3layouts</title>
+    <title>SPRING Hotel</title>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:600italic,700italic,800italic,400,300,600,700,800'
           rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Pinyon+Script' rel='stylesheet' type='text/css'>
@@ -201,14 +201,16 @@
                 <div class="LatestNews">
                     <p>Records were smashed in
                         Nicaragua’s World Wrestling Championship
-                        last night as 78-year-old
-                        Maud Johnson, grandmother of five.</p>
+                        last night by 78-year-old
+                        Maud Johnson, a grandmother of five.</p>
                     <span>05-11-2017 </span>
                 </div>
 
                 <div class="clearfix"></div>
 
             </div>
+
+
         </div>
     </div>
 </div>

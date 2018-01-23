@@ -17,7 +17,7 @@ public class IMClientDAO extends IMBaseDAO<Client> implements ClientDAO {
         }
 
         Collection<Client> all = new LinkedList<Client>(getAll());
-        for (Iterator<Client> it = all.iterator(); it.hasNext();) {
+        for (Iterator<Client> it = all.iterator(); it.hasNext(); ) {
             Client client = it.next();
             String ss = client.getFirstName() + " " + client.getLastName();
             if (!ss.toLowerCase().contains(query.toLowerCase())) {
@@ -26,7 +26,6 @@ public class IMClientDAO extends IMBaseDAO<Client> implements ClientDAO {
         }
         return all;
     }
-
 
 
 }

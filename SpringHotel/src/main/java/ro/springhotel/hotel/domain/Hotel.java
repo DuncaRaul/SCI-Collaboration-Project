@@ -11,8 +11,8 @@ public class Hotel {
     private ArrayList<Client> clients;
     private Parking parking;
     private PetCare petCare;
-    private int numberOfRooms;
-    private Payment payment;
+    private int numberOfRooms = 40;
+
 
     public ArrayList<Room> getRooms() {
         return rooms;
@@ -34,6 +34,7 @@ public class Hotel {
         return numberOfRooms;
     }
 
+
     @Override
     public String toString() {
         return "Hotel{" +
@@ -42,7 +43,6 @@ public class Hotel {
                 ", parking=" + parking +
                 ", petCare=" + petCare +
                 ", numberOfRooms=" + numberOfRooms +
-                ", payment=" + payment +
                 '}';
     }
 }

@@ -7,7 +7,7 @@ import ro.springhotel.hotel.dao.inmemory.IMClientDAO;
 import ro.springhotel.hotel.service.ClientService;
 
 @Configuration
-    public class ApplicationConfiguration {
+public class ApplicationConfiguration {
 
     @Bean
     public ClientService clientService() {

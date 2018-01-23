@@ -1,7 +1,7 @@
 package ro.springhotel.hotel.domain;
 
 /**
- * @author Dani 
+ * @author Dani
  */
 public enum TypeOfRoom {
     SINGLEROOM,

@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>hotel-fortune bootstrap Design website | Home :: w3layouts</title>
+    <title>SPRING Hotel</title>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:600italic,700italic,800italic,400,300,600,700,800'
           rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Pinyon+Script' rel='stylesheet' type='text/css'>
@@ -29,7 +29,7 @@
                     <li><a href="/./homepage/facilities">FACILITIES</a></li>
                     <li><a href="/./client/login">BOOKING</a></li>
                     <li><a href="/./homepage/details">DETAILS</a></li>
-                    <li><a  href="/./homepage/contact">CONTACT US</a></li>
+                    <li><a href="/./homepage/contact">CONTACT US</a></li>
                     <li><a href="/./client/login">LOGIN</a></li>
                     <div class="clearfix"></div>
                 </ul>
@@ -50,7 +50,8 @@
                 <div class="contact-us_info">
                     <h3 class="style">Find Us Here</h3>
                     <div class="map">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21909.099730929236!2d26.960685235528864!3d46.65367427204829!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b564af5c1d6691%3A0x8678b26db640b372!2zUHLEg2plyJl0aSA2MDc2MzksIFJvbWFuaWE!5e0!3m2!1sen!2sus!4v1516647190930" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21909.099730929236!2d26.960685235528864!3d46.65367427204829!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b564af5c1d6691%3A0x8678b26db640b372!2zUHLEg2plyJl0aSA2MDc2MzksIFJvbWFuaWE!5e0!3m2!1sen!2sus!4v1516647190930"
+                                width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
                         <br>
 
                     </div>
@@ -62,14 +63,15 @@
                     <p>Spring Country.</p>
                     <p>Phone:0040111222333</p>
                     <p>Fax: 0040444555666</p>
-                    <p>Email: <a href="mailto:dani@raul.">dani@raul.plm</a></p>
-                    <p>Follow on: <a href="https://www.facebook.com/danielundercow">Facebook</a>, <a href="https://www.twitch.tv/danielandercau">Twitch</a></p>
+                    <p>Email: <a href="mailto:dani@raul">dani@raul.plm</a></p>
+                    <p>Follow on: <a href="https://www.facebook.com/danielundercow">Facebook</a>, <a
+                            href="https://www.twitch.tv/danielandercau">Twitch</a></p>
                 </div>
             </div>
             <div class="contact_right">
                 <div class="contact-form">
                     <h3 class="style">Contact Us</h3>
-                    <form method="post" action="homepage.ftl">
+                    <form method="get" action="/./homepage/contact">
                         <div>
                             <span><label>NAME</label></span>
                             <span><input name="userName" type="text" class="textbox"></span>
@@ -131,16 +133,28 @@
         </div>
         <div class="member">
             <h4>MEMBERS AREA</h4>
-            <form>
-                <p>Username</p>
-                <input type="text" placeholder="username" required/>
-                <p>Password</p>
-                <input type="password" placeholder="password" required/>
+
+            <form method="POST" action="/client/loginn">
+                <p>Username: <input type="text" name="userName"/></p>
+                <p>Password: <input type="password" name="password"/></p>
+                <input type="hidden" name="firstName" value="caca"/>
+                <input type="hidden" name="lastName" value="raca"/>
+                <input type="hidden" name="birthDate" value="12/12/1992"/>
+
+
+                <input type="hidden" name="gender" value="MALE"/>
+
+
                 <input type="submit" value="LOGIN"/>
-                <input type="submit" value="REGISTER"/>
+
             </form>
+
+            <form method="GET" action="/client/register">
+                <input type="submit" value="REGISTER">
+            </form>
+
+
         </div>
-        <div class="clearfix"></div>
     </div>
     <div class="clearfix"></div>
 </div>

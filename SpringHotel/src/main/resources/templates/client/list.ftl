@@ -8,31 +8,29 @@
 
 <a href="/client/add">ADD</a>
 <table>
-<tr>
-    <th>user name</th>
-    <th>password</th>
-    <th>first name</th>
-    <th>last name</th>
-    <th>gender</th>
-    <th>birth date</th>
-    <th></th>
+    <tr>
+        <th>user name</th>
+        <th>password</th>
+        <th>first name</th>
+        <th>last name</th>
+        <th>gender</th>
+        <th>birth date</th>
+        <th></th>
 
-</tr>
+    </tr>
 
 [#list clients as client]
-<tr>
-    <td>${client.userName}</td>
-    <td>${client.password}</td>
-    <td>${client.firstName}</td>
-    <td>${client.lastName}</td>
-    <td>${client.gender}</td>
-    <td>${client.birthDate?string('dd/MM/yyyy')}</td>
-    <td><a href="/client/edit?id=${client.id?c}">EDIT</a></td>
+    <tr>
+        <td>${client.userName}</td>
+        <td>${client.password}</td>
+        <td>${client.firstName}</td>
+        <td>${client.lastName}</td>
+        <td>${client.gender}</td>
+        <td>${client.birthDate?string('dd/MM/yyyy')}</td>
+        <td><a href="/client/edit?id=${client.id?c}">EDIT</a></td>
 
 
-
-
-</tr>
+    </tr>
 [/#list]
 
 

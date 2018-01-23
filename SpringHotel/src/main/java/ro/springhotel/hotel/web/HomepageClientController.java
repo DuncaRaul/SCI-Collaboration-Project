@@ -2,6 +2,8 @@ package ro.springhotel.hotel.web;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import ro.springhotel.hotel.service.HotelServices;
 
 @Controller
 @RequestMapping("/homepage_client")
@@ -34,4 +36,14 @@ public class HomepageClientController {
     }
 
 
+    private HotelServices hotelServices = new HotelServices(40, 60, 1, 50, 20, 120);
+
+    @RequestMapping(method = RequestMethod.POST, value = "/reserve")
+    public String reserveRoom(int i) {
+
+        hotelServices.reserveKennel(i);
+
+
+        return "redirect:/homepage";
+    }
 }

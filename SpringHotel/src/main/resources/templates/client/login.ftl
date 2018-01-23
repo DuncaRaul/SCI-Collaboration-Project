@@ -1,7 +1,7 @@
 [#ftl]
 <html>
 <head>
-    <title>hotel-fortune bootstrap Design website | Home :: w3layouts</title>
+    <title>SPRING Hotel</title>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:600italic,700italic,800italic,400,300,600,700,800'
           rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Pinyon+Script' rel='stylesheet' type='text/css'>
@@ -57,15 +57,14 @@
                     <input type="hidden" name="birthDate" value="12/12/1992"/>
 
 
-
-                        <input type="hidden" name="gender" value="MALE"/>
+                    <input type="hidden" name="gender" value="MALE"/>
 
 
                     <input type="submit" value="LOGIN"/>
 
                 </form>
 
-                <form method="GET" action ="/client/register">
+                <form method="GET" action="/client/register">
                     <input type="submit" value="REGISTER">
                 </form>
 

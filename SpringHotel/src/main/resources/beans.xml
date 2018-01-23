@@ -5,7 +5,7 @@
 
     <bean id="imDAO" class="ro.springhotel.hotel.dao.inmemory.IMClientDAO"/>
     <bean id="clientService" class="ro.springhotel.hotel.service.ClientService">
-        <property name="dao" ref="imDAO" />
+        <property name="dao" ref="imDAO"/>
     </bean>
 
 </beans>

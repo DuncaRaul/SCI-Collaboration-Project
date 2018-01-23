@@ -1,7 +1,7 @@
 [#ftl]
 <html>
 <head>
-    <title>hotel-fortune bootstrap Design website | Home :: w3layouts</title>
+    <title>SPRING Hotel</title>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:600italic,700italic,800italic,400,300,600,700,800'
           rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Pinyon+Script' rel='stylesheet' type='text/css'>
@@ -27,7 +27,7 @@
                     <li><a href="/./homepage_client/facilities_client">FACILITIES</a></li>
                     <li><a href="/./homepage_client/booking_client">BOOKING</a></li>
                     <li><a href="/./homepage_client/details_client">DETAILS</a></li>
-                    <li><a  href="/./homepage_client/contact_client">CONTACT US</a></li>
+                    <li><a href="/./homepage_client/contact_client">CONTACT US</a></li>
                     <li><a href="/./homepage">LOGOUT</a></li>
 
                 </ul>
@@ -74,6 +74,7 @@
 			domainKey: ''
 		});
 	})();
+
 
 
 </script>

@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 import ro.springhotel.hotel.domain.Client;
 import ro.springhotel.hotel.service.ClientService;
+import ro.springhotel.hotel.service.HotelServices;
 import ro.springhotel.hotel.service.ValidationException;
 
 import java.util.Collection;
@@ -55,6 +56,11 @@ public class ClientController {
         return "/client/add_client";
     }
 
+    @RequestMapping("/login_invalid")
+    public String displayLoginInvalidPage() {
+        return "/client/login_invalid";
+    }
+
     @RequestMapping("/login")
     public String loginView() {
         return ("/client/login");
@@ -73,7 +79,6 @@ public class ClientController {
         boolean dani = false;
         long id = 0;
 
-        System.out.println("câcat");
 
         for (Client client2 : clientList) {
             if (client2.getFirstName().equals("caca")) {
@@ -99,26 +104,9 @@ public class ClientController {
         if (dani) {
             return "redirect:/homepage_client";
         } else {
-            return "redirect:/homepage";
+            return "redirect:/client/login_invalid";
         }
     }
-
-//        @RequestMapping(method = RequestMethod.POST, value = "/loginn")
-//        public String loginView(String user,String pass) {
-//            Collection<Client> clientList = clientService.listAll();
-//            boolean result = false;
-//            for (Client j:
-//                    clientList) {
-//                if ((j.getUserName().equals(user)) && (j.getPassword().equals(pass))){
-//                    result = true;
-//                } else {
-//                    result = false;
-//                }
-//            }
-//            if (result) {
-//                return "reditect:/client";
-//            } else return "/homepage";
-//        }
 
 
     @RequestMapping("/register")

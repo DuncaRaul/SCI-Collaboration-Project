@@ -4,7 +4,7 @@ import ro.springhotel.hotel.domain.Client;
 
 import java.util.Collection;
 
-public interface ClientDAO extends BaseDAO<Client>{
+public interface ClientDAO extends BaseDAO<Client> {
 
     Collection<Client> searchByName(String query);
 }
