@@ -17,7 +17,7 @@
     <div class="top-header">
         <div class="container">
             <div class="logo">
-                <a href="/*/homepage_client"><img src="/images/logo.png"/></a>
+                <a href="/./homepage_client"><img src="/images/logo.png"/></a>
             </div>
             <span class="menu"> </span>
             <div class="m-clear"></div>
@@ -82,7 +82,7 @@
 <!---->
 <div class="package text-center">
     <div class="container">
-        <h3><a href="homepage/booking">Book a room!</a></h3>
+        <h3><a href="/./homepage_client/booking_client">Book a room!</a></h3>
         <p></p>
         <p>Spring Hotel was designed in such a way that it suits anyone's needs. From single rooms to a penthouse, we
             guarantee that you will not regret
