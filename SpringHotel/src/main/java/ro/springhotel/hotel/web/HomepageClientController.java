@@ -5,6 +5,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import ro.springhotel.hotel.service.HotelServices;
 
+/**
+ * @author Raul
+ */
 @Controller
 @RequestMapping("/homepage_client")
 public class HomepageClientController {

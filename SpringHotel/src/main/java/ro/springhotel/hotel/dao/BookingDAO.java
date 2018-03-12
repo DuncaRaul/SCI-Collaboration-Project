@@ -5,6 +5,9 @@ import ro.springhotel.hotel.domain.LoginInfo;
 
 import java.util.Collection;
 
+/**
+ * @author Raul
+ */
 public interface BookingDAO extends BaseDAO<Booking> {
 
     Collection<Booking> searchByName(String query);

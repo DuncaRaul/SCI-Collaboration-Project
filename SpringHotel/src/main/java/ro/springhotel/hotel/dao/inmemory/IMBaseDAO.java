@@ -8,6 +8,10 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicLong;
 
+/**
+ * @author Raul
+ * @param <T> Generic parameter
+ */
 public class IMBaseDAO<T extends AbstractModel> implements BaseDAO<T> {
     private Map<Long, T> models = new HashMap<Long, T>();
 

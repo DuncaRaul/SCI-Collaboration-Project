@@ -10,6 +10,9 @@ import ro.springhotel.hotel.domain.LoginInfo;
 
 import java.util.*;
 
+/**
+ * @author Raul
+ */
 public class BookingService {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(BookingService.class);

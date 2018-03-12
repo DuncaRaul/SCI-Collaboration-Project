@@ -2,6 +2,9 @@ package ro.springhotel.hotel.domain;
 
 import java.util.Objects;
 
+/**
+ * @author Raul
+ */
 public class LoginInfo extends AbstractModel {
 
     private String username;

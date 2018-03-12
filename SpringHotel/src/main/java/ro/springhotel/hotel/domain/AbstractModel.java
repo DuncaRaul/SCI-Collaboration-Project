@@ -1,5 +1,8 @@
 package ro.springhotel.hotel.domain;
 
+/**
+ * @author Raul
+ */
 public abstract class AbstractModel {
     private long id;
 

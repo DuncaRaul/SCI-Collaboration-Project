@@ -2,6 +2,9 @@ package ro.springhotel.hotel.service;
 
 import java.util.Arrays;
 
+/**
+ * @author Raul
+ */
 public class ValidationException extends Exception {
     private String[] causes;
 

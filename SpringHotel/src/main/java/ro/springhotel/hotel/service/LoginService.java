@@ -11,6 +11,9 @@ import java.util.Collection;
 import java.util.LinkedList;
 import java.util.List;
 
+/**
+ * @author Raul
+ */
 public class LoginService {
     private static final Logger LOGGER = LoggerFactory.getLogger(LoginService.class);
 

@@ -13,6 +13,9 @@ import ro.springhotel.hotel.service.ValidationException;
 
 import java.util.Collection;
 
+/**
+ * @author Raul
+ */
 @Controller
 @RequestMapping("/client")
 public class ClientController {

@@ -9,6 +9,9 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.LinkedList;
 
+/**
+ * @author Raul
+ */
 public class IMBookingDAO extends IMBaseDAO<Booking> implements BookingDAO {
 
     @Override

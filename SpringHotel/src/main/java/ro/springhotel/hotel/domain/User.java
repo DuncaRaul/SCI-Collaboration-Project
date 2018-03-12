@@ -1,5 +1,8 @@
 package ro.springhotel.hotel.domain;
 
+/**
+ * @author Raul
+ */
 public class User {
 
     private String userName;

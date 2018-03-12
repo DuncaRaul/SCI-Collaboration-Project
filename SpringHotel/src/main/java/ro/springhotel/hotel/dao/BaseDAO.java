@@ -4,6 +4,10 @@ import ro.springhotel.hotel.domain.AbstractModel;
 
 import java.util.Collection;
 
+/**
+ * @author Raul
+ * @param <T> Generic parameter
+ */
 public interface BaseDAO<T extends AbstractModel> {
 
     Collection<T> getAll();

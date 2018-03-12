@@ -3,6 +3,9 @@ package ro.springhotel.hotel.domain;
 import java.util.Date;
 import java.util.Objects;
 
+/**
+ * @author Raul
+ */
 public class Booking extends AbstractModel{
 
    private String name;

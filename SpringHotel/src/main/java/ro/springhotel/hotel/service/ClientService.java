@@ -16,7 +16,9 @@ import ro.springhotel.hotel.domain.Client;
 import ro.springhotel.hotel.domain.LoginInfo;
 import ro.springhotel.hotel.domain.Room;
 
-
+/**
+ * @author Raul
+ */
 public class ClientService {
     private static final Logger LOGGER = LoggerFactory.getLogger(ClientService.class);
 

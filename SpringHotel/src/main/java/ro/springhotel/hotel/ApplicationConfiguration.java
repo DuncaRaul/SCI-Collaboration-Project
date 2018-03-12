@@ -11,6 +11,9 @@ import ro.springhotel.hotel.dao.inmemory.IMLoginDAO;
 import ro.springhotel.hotel.service.ClientService;
 import ro.springhotel.hotel.service.LoginService;
 
+/**
+ * @author Raul
+ */
 @Configuration
 public class ApplicationConfiguration {
 
